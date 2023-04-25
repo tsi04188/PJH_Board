@@ -29,7 +29,6 @@
             <tr>
                 <th>번호</th>
                 <th>제목</th>
-                <th>작성자</th>
                 <th>조회수</th>
                 <th>등록일</th>
 
@@ -39,7 +38,6 @@
             <tr th:each="board : ${list}">
                 <td th:text="${board.id}"></td>
                 <td><a th:href="@{/board/view/{id}(id=${board.id})}" th:text="${board.title}"></a></td>
-                <td th:text="${board.writer}"></td>
                 <td th:text="${board.view}"></td>
                 <td th:text="${board.regDate}"></td>
             </tr>
